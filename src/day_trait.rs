@@ -2,6 +2,10 @@ pub trait Day {
     fn get_description(&self) -> String;
     fn executer_partie1(&self, input: &str) -> i128;
     fn executer_partie2(&self, input: &str) -> i128;
+    fn recuperer_input_file(&self) -> InputFile;
+    fn recuperer_input_file_partie2(&self) -> InputFile {
+        self.recuperer_input_file()
+    }
 
 }
 

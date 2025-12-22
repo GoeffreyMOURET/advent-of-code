@@ -1,9 +1,10 @@
-use crate::day_trait::{Day};
+use crate::aoc2025::day6_input_file::INPUT_FILE_DAY6;
+use crate::day_trait::{Day, InputFile};
 
 pub struct Day6 {}
 impl Day for Day6 {
     fn get_description(&self) -> String {
-        "Année 2025, Jour 6".to_string()
+        String::from("Année 2025, Jour 6")
     }
 
     fn executer_partie1(&self, input: &str) -> i128 {
@@ -16,6 +17,9 @@ impl Day for Day6 {
         preparer_input_partie2(input).iter()
             .map(Colonne::effectuer_operation)
             .sum()
+    }
+    fn recuperer_input_file(&self) -> InputFile {
+        INPUT_FILE_DAY6
     }
 }
 
@@ -46,7 +50,7 @@ fn preparer_input_partie1(input: &str) -> Vec<Colonne> {
         ligne
             .split(".")
             .filter(|l| *l != "")
-            .map(|s| s.parse::<i128>().unwrap())
+            .map(|s| s.parse::<i128>().expect("L'input n'a pas le format attendu"))
             .enumerate()
             .for_each(|(i, nombre)|{
                 ajouter_nombre_dans_resultat(&mut nombres, i, nombre)
@@ -106,7 +110,7 @@ fn ajouter_nombre_dans_resultat(
 
 fn extraire_info_input(input: &str) -> (Vec<&str>, &str) {
     let mut lignes_nombre: Vec<&str> = input.lines().collect();
-    let ligne_operation = lignes_nombre.pop().unwrap();
+    let ligne_operation = lignes_nombre.pop().expect("Mauvais format input");
     (lignes_nombre, ligne_operation)
 }
 
