@@ -4,6 +4,7 @@ mod aoc2025;
 mod day_trait;
 mod resultat_jour;
 mod execution_jour_service;
+mod utils;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
