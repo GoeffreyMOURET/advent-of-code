@@ -25,6 +25,7 @@ library!(services "Services de l'advent of code"
 );
 
 library!(aoc2025 "Advent of code 2025"
+    day1, day1_input_file,
     day3, day3_input_file,
     day6, day6_input_file,
     day7, day7_input_file,

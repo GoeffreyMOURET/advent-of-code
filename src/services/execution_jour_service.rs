@@ -1,3 +1,4 @@
+use crate::aoc2025::day1::Day1;
 use crate::aoc2025::day10::Day10;
 use crate::aoc2025::day12::Day12;
 use crate::aoc2025::day3::Day3;
@@ -14,6 +15,7 @@ impl ExecutionJourService {
 
     fn recuperer_jour(numero_jour: i8) -> Box<dyn Day> {
         match numero_jour {
+            1 => Box::new(Day1{}),
             3 => Box::new(Day3{}),
             6 => Box::new(Day6{}),
             7 => Box::new(Day7{}),
