@@ -109,7 +109,7 @@ impl Day8 {
 }
 
 use std::collections::HashSet;
-use std::hash::{Hash};
+use std::hash::Hash;
 
 #[derive(Debug, Clone, Copy, PartialEq, Hash, Eq)]
 struct Point3D {

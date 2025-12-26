@@ -30,5 +30,6 @@ library!(aoc2025 "Advent of code 2025"
     day7, day7_input_file,
     day8, day8_input_file,
     day9, day9_input_file,
-    day10, day10_input_file
+    day10, day10_input_file,
+    day12, day12_input_file
 );
