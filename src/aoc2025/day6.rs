@@ -1,5 +1,5 @@
 use crate::aoc2025::day6_input_file::INPUT_FILE_DAY6;
-use crate::day_trait::{Day, InputFile};
+use crate::structures::day_trait::{Day, InputFile};
 
 pub struct Day6 {}
 impl Day for Day6 {

@@ -1,10 +1,5 @@
 use std::env;
-
-mod aoc2025;
-mod day_trait;
-mod resultat_jour;
-mod execution_jour_service;
-mod utils;
+use advent_of_code::services::execution_jour_service::ExecutionJourService;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -13,6 +8,5 @@ fn main() {
     if args.len() > 1 && let Ok(n) = args[1].parse::<i8>() {
         jour = n;
     }
-
-    aoc2025::executer_jour(jour);
+    ExecutionJourService::executer_jour(jour);
 }

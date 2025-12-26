@@ -1,4 +1,4 @@
-use crate::day_trait::InputFile;
+use crate::structures::day_trait::InputFile;
 
 const EXEMPLE: &str = "162,817,812
 57,618,57
