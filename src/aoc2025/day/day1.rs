@@ -1,4 +1,4 @@
-use crate::aoc2025::day1_input_file::INPUT_FILE_DAY1;
+use crate::aoc2025::input::day1_input_file::INPUT_FILE_DAY1;
 use crate::structures::day_trait::{Day, InputFile};
 
 pub struct Day1 {}
@@ -50,7 +50,7 @@ impl Rotation {
 }
 
 mod dial {
-    use crate::aoc2025::day1::{Direction, Rotation};
+    use crate::aoc2025::day::day1::{Direction, Rotation};
 
     pub struct Roue {
         etat: i128,

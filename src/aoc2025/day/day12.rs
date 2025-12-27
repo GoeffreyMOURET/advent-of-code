@@ -1,4 +1,4 @@
-use crate::aoc2025::day12_input_file::INPUT_FILE_DAY12;
+use crate::aoc2025::input::day12_input_file::INPUT_FILE_DAY12;
 use crate::structures::day_trait::{Day, InputFile};
 
 const NB_FORMS_CADEAUX: usize = 6;

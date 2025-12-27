@@ -1,6 +1,6 @@
-use std::collections::{HashMap, HashSet};
-use crate::aoc2025::day7_input_file::INPUT_FILE_DAY7;
+use crate::aoc2025::input::day7_input_file::INPUT_FILE_DAY7;
 use crate::structures::day_trait::{Day, InputFile};
+use std::collections::{HashMap, HashSet};
 
 const SPLITTER: char = '^';
 const START: char = 'S';

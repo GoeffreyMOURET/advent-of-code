@@ -1,5 +1,5 @@
-use crate::aoc2025::day10::generateur_etat::GenerateurEtat;
-use crate::aoc2025::day10_input_file::INPUT_FILE_DAY10;
+use crate::aoc2025::day::day10::generateur_etat::GenerateurEtat;
+use crate::aoc2025::input::day10_input_file::INPUT_FILE_DAY10;
 use crate::structures::day_trait::{Day, InputFile};
 
 pub struct Day10 {}
@@ -34,7 +34,7 @@ impl Day10 {
 }
 
 mod generateur_etat {
-    use crate::aoc2025::day10::{InfoMachine};
+    use crate::aoc2025::day::day10::InfoMachine;
 
     #[derive(Debug)]
     pub struct GenerateurEtat {

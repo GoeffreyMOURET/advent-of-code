@@ -1,4 +1,4 @@
-use crate::aoc2025::day2_input_file::INPUT_FILE_DAY2;
+use crate::aoc2025::input::day2_input_file::INPUT_FILE_DAY2;
 use crate::structures::day_trait::{Day, InputFile};
 use std::collections::HashSet;
 

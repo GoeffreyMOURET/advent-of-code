@@ -1,4 +1,4 @@
-use crate::aoc2025::day4_input_file::INPUT_FILE_DAY4;
+use crate::aoc2025::input::day4_input_file::INPUT_FILE_DAY4;
 use crate::structures::day_trait::{Day, InputFile};
 use std::cmp::PartialEq;
 

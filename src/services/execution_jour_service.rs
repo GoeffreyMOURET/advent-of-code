@@ -1,14 +1,14 @@
-use crate::aoc2025::day1::Day1;
-use crate::aoc2025::day10::Day10;
-use crate::aoc2025::day12::Day12;
-use crate::aoc2025::day2::Day2;
-use crate::aoc2025::day3::Day3;
-use crate::aoc2025::day4::Day4;
-use crate::aoc2025::day5::Day5;
-use crate::aoc2025::day6::Day6;
-use crate::aoc2025::day7::Day7;
-use crate::aoc2025::day8::Day8;
-use crate::aoc2025::day9::Day9;
+use crate::aoc2025::day::day1::Day1;
+use crate::aoc2025::day::day10::Day10;
+use crate::aoc2025::day::day12::Day12;
+use crate::aoc2025::day::day2::Day2;
+use crate::aoc2025::day::day3::Day3;
+use crate::aoc2025::day::day4::Day4;
+use crate::aoc2025::day::day5::Day5;
+use crate::aoc2025::day::day6::Day6;
+use crate::aoc2025::day::day7::Day7;
+use crate::aoc2025::day::day8::Day8;
+use crate::aoc2025::day::day9::Day9;
 use crate::structures::day_trait::Day;
 use crate::structures::resultat_jour::ResultatJour;
 

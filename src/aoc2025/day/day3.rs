@@ -1,4 +1,4 @@
-use crate::aoc2025::day3_input_file::INPUT_FILE_DAY3;
+use crate::aoc2025::input::day3_input_file::INPUT_FILE_DAY3;
 use crate::structures::day_trait::{Day, InputFile};
 
 pub struct Day3 {}

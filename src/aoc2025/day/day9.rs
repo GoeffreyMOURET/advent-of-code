@@ -1,4 +1,4 @@
-use crate::aoc2025::day9_input_file::INPUT_FILE_DAY9;
+use crate::aoc2025::input::day9_input_file::INPUT_FILE_DAY9;
 use crate::structures::day_trait::{Day, InputFile};
 use crate::utils::min_max_utils::get_max_min;
 
