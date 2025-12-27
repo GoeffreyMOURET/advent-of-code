@@ -1,6 +1,5 @@
 use crate::aoc2025::day8_input_file::INPUT_FILE_DAY8;
 use crate::structures::day_trait::{Day, InputFile};
-use crate::utils::array_utils;
 pub struct Day8 {}
 impl Day for Day8 {
     fn get_description(&self) -> String {
@@ -11,7 +10,7 @@ impl Day for Day8 {
         let points = Day8::parse_points(input);
 
         let mut distance = CouplePoint::construire_produit_cartesien(points.as_ref());
-        array_utils::quick_sort_by(&mut distance, &|c: &CouplePoint| c.distance);
+        distance.sort_by_key(&|c: &CouplePoint| c.distance);
 
         // Trick pour savoir si on est dans le cas de l'exemple ou si on est dans le vrai cas
         let nb_repetitions = if points.len() < 100 { 10 } else { 1000 };
@@ -30,7 +29,7 @@ impl Day for Day8 {
         let points = Day8::parse_points(input);
 
         let mut distance = CouplePoint::construire_produit_cartesien(points.as_ref());
-        array_utils::quick_sort_by(&mut distance, &|c: &CouplePoint| c.distance);
+        distance.sort_by_key(&|c: &CouplePoint| c.distance);
 
         let mut jonctions: Vec<HashSet<Point3D>> = Vec::new();
 
@@ -92,7 +91,7 @@ impl Day8 {
     }
 
     fn calculer_resultat_partie_1(mut connections: Vec<HashSet<Point3D>>) -> i128 {
-        array_utils::quick_sort_by(connections.as_mut(), &|c: &HashSet<Point3D>| c.len());
+        connections.sort_by_key(|set| set.len());
         connections = connections.iter().rev().cloned().collect();
 
         connections.get(0).unwrap().len() as i128

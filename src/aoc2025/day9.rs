@@ -1,7 +1,6 @@
 use crate::aoc2025::day9_input_file::INPUT_FILE_DAY9;
-use crate::utils::array_utils;
 use crate::structures::day_trait::{Day, InputFile};
-use crate::utils::min_max_utils::{get_max_min};
+use crate::utils::min_max_utils::get_max_min;
 
 pub struct Day9 {}
 impl Day for Day9 {
@@ -23,7 +22,7 @@ impl Day for Day9 {
         let points = Self::parse_points(input);
         let mut rectangles = CouplePoint::construire_produit_cartesien(&points);
         // On trie la liste des possibilités par surface décroissante. Ainsi, le premier résultat trouvé possible est le max !
-        array_utils::quick_sort_by(&mut rectangles, &|r| { -1 * r.surface });
+        rectangles.sort_by_key(&|r: &CouplePoint| { -1 * r.surface });
         rectangles.iter().find(|couple | {
 
             let (xmax, xmin) = get_max_min(couple.point1.x, couple.point2.x);

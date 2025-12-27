@@ -11,7 +11,6 @@ macro_rules! library {
 }
 
 library!(utils "Utilitaires plutôt pratiques"
-    array_utils,
     min_max_utils
 );
 
