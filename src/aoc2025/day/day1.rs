@@ -1,3 +1,4 @@
+use crate::aoc2025::day::day1::dial::Roue;
 use crate::aoc2025::input::day1_input_file::INPUT_FILE_DAY1;
 use crate::structures::day_trait::{Day, InputFile};
 
@@ -8,24 +9,24 @@ impl Day for Day1 {
     }
 
     fn executer_partie1(&self, input: &str) -> i128 {
-        let mut roue = dial::Roue::new();
-        input.lines()
-            .filter_map(|line| { Rotation::parse(line).ok() })
-            .for_each(|rotation| { roue.effectuer_rotation(rotation) });
-
-       roue.get_resultat_partie1()
+        Self::calculer_resultat(input).get_resultat_partie1()
     }
 
     fn executer_partie2(&self, input: &str) -> i128 {
+        Self::calculer_resultat(input).get_resultat_partie2()
+    }
+    fn recuperer_input_file(&self) -> InputFile {
+        INPUT_FILE_DAY1
+    }
+}
+
+impl Day1 {
+    fn calculer_resultat(input: &str) -> Roue {
         let mut roue = dial::Roue::new();
         input.lines()
             .filter_map(|line| { Rotation::parse(line).ok() })
             .for_each(|rotation| { roue.effectuer_rotation(rotation) });
-
-        roue.get_resultat_partie2()
-    }
-    fn recuperer_input_file(&self) -> InputFile {
-        INPUT_FILE_DAY1
+        roue
     }
 }
 

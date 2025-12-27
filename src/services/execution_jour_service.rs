@@ -1,5 +1,6 @@
 use crate::aoc2025::day::day1::Day1;
 use crate::aoc2025::day::day10::Day10;
+use crate::aoc2025::day::day11::Day11;
 use crate::aoc2025::day::day12::Day12;
 use crate::aoc2025::day::day2::Day2;
 use crate::aoc2025::day::day3::Day3;
@@ -28,6 +29,7 @@ impl ExecutionJourService {
             8 => Box::new(Day8{}),
             9 => Box::new(Day9{}),
             10 => Box::new(Day10{}),
+            11 => Box::new(Day11{}),
             12 => Box::new(Day12{}),
             _ => panic!("Non implémenté"),
         }
