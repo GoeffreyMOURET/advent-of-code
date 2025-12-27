@@ -2,6 +2,8 @@ use crate::aoc2025::day12_input_file::INPUT_FILE_DAY12;
 use crate::structures::day_trait::{Day, InputFile};
 
 const NB_FORMS_CADEAUX: usize = 6;
+const BLOC_PLEIN: char = '#';
+const BLOC_VIDE: char = '.';
 pub struct Day12 {}
 impl Day for Day12 {
     fn get_description(&self) -> String {
@@ -50,8 +52,8 @@ impl TypeCadeau {
     fn parse(input: &str) -> TypeCadeau {
         TypeCadeau {
             forme: input.lines()
-                .filter(|line| line.starts_with('.') || line.starts_with('#'))
-                .map(|line| line.chars().map(|c| if c == '#' { 1 } else { 0 }).collect())
+                .filter(|line| line.starts_with(BLOC_VIDE) || line.starts_with(BLOC_PLEIN))
+                .map(|line| line.chars().map(|c| if c == BLOC_PLEIN { 1 } else { 0 }).collect())
                 .collect()
         }
     }
