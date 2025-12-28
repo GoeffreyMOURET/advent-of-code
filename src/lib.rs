@@ -54,3 +54,10 @@ library_day!(
      day5_input_file, day6_input_file, day7_input_file, day8_input_file,
      day9_input_file, day10_input_file, day11_input_file, day12_input_file]
 );
+
+library_day!(
+    aoc2024,
+    "Advent of code 2024",
+    [day1],
+    [day1_input_file]
+);
