@@ -21,7 +21,9 @@ library!(structures "Structures de l'advent of code"
 );
 
 library!(services "Services de l'advent of code"
-    execution_jour_service
+    execution_jour_annee_2025_service,
+    execution_jour_annee_2024_service,
+    execution_service
 );
 
 macro_rules! library_day {

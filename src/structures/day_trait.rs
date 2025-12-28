@@ -14,3 +14,6 @@ pub struct InputFile {
     pub inconnu: &'static str
 }
 
+pub trait ExecutionAnnee {
+    fn recuperer_jour(numero_jour: u8) -> Box<dyn Day>;
+}
