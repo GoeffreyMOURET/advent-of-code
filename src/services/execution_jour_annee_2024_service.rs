@@ -1,5 +1,6 @@
 use crate::aoc2024::day::day1::Day1;
 use crate::aoc2024::day::day2::Day2;
+use crate::aoc2024::day::day3::Day3;
 use crate::structures::day_trait::{Day, ExecutionAnnee};
 
 pub struct ExecutionJourAnnee2024Service;
@@ -8,6 +9,7 @@ impl ExecutionAnnee for ExecutionJourAnnee2024Service {
         match numero_jour {
             1 => Box::new(Day1{}),
             2 => Box::new(Day2{}),
+            3 => Box::new(Day3{}),
             _ => panic!("Non implémenté"),
         }
     }

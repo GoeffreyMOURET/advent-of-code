@@ -21,7 +21,7 @@ impl Day for Day1 {
         let input = InputPart2::parse(input);
         input.liste1.iter()
             .map(|(&cle,&valeur)| {
-                input.liste2.get(&cle).unwrap_or_else(|| &0) * valeur * cle
+                input.liste2.get(&cle).unwrap_or(&0) * valeur * cle
             })
             .sum()
     }
@@ -51,10 +51,7 @@ impl InputPart2 {
                         1 => &mut liste2,
                         _ => panic!("Unexpected index {}", index),
                     };
-                    liste.insert(
-                        valeur,
-                        *liste.get(&valeur).unwrap_or_else(|| &0) + 1,
-                    );
+                    *liste.entry(valeur).or_insert(0) += 1;
                 })
         }
 

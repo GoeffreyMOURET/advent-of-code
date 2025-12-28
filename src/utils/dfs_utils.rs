@@ -15,7 +15,7 @@ fn dfs<'a, T>(
     cache: &mut HashMap<&'a T, u128>,
     node: &'a T,
     end: &'a T
-) -> u128 where T: PartialEq + ?Sized, T: Eq + Hash {
+) -> u128 where T: Eq + Hash + ?Sized {
     if node == end { return 1; }
     if let Some(resultat_cache) = cache.get(&node) {
         return *resultat_cache;
